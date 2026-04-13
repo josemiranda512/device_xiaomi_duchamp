@@ -33,3 +33,12 @@ binder_call(system_app, vendor_hal_displayfeature_xiaomi_default)
 allow system_app hal_touchfeature_xiaomi_service:service_manager find;
 binder_call(system_app, hal_touchfeature_xiaomi)
 
+# Gamebar V4 
+allow system_app sysfs_power_supply:dir search;
+allow system_app sysfs_power_supply:file r_file_perms;
+
+allow system_app proc_stat:file { read open getattr };
+allow system_app sysfs_gpu:dir search;
+allow system_app sysfs_gpu:file r_file_perms;
+
+
