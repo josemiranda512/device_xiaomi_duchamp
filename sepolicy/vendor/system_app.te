@@ -42,7 +42,4 @@ allow system_app sysfs_gpu:file r_file_perms;
 allow system_app sysfs_power_supply:dir search;
 allow system_app sysfs_power_supply:file r_file_perms;
 
-# Devfreq (GPU frequency)
-allow system_app sysfs:dir r_dir_perms;
-allow system_app sysfs:file r_file_perms;
 
