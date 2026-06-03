@@ -35,14 +35,11 @@ allow system_app sysfs_therm:file r_file_perms;
 allow system_app proc_stat:file r_file_perms;
 
 # GPU
-allow system_app sysfs_gpu:dir search;
-allow system_app sysfs_gpu:file r_file_perms;
+allow system_app sysfs_ged:dir r_dir_perms;
+allow system_app sysfs_ged:file r_file_perms;
 
 # Battery
 allow system_app sysfs_power_supply:dir search;
 allow system_app sysfs_power_supply:file r_file_perms;
 
-# Devfreq (GPU frequency)
-allow system_app sysfs:dir r_dir_perms;
-allow system_app sysfs:file r_file_perms;
 
