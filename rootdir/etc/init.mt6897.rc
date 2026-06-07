@@ -382,6 +382,9 @@ chmod 0664 /sys/kernel/ged/hal/current_freqency
 chown system system /sys/kernel/ged/hal/previous_freqency
 chmod 0664 /sys/kernel/ged/hal/previous_freqency
 
+# Bypass Charging
+    chown system system /sys/class/power_supply/battery/input_suspend
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
 chown system system /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
     chmod 0664 /sys/devices/platform/goodix_ts.0/goodix_ts_report_rate
 
