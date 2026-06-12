@@ -42,6 +42,4 @@ allow system_app sysfs_ged:file r_file_perms;
 allow system_app sysfs_power_supply:dir search;
 allow system_app sysfs_power_supply:file r_file_perms;
 
-# Bypass Charging
-allow system_app sysfs_battery_supply:dir search;
-allow system_app sysfs_battery_supply:file { getattr open read write };
+

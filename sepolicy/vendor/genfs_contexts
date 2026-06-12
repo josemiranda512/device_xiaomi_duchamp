@@ -85,5 +85,3 @@ genfscon sysfs /devices/platform/11d00000.i2c/i2c-0/0-006b                      
 # Touch Sampling
 genfscon sysfs /devices/platform/goodix_ts.0/goodix_ts_report_rate                                    u:object_r:vendor_sysfs_htsr:s0
 
-# Charge bypass
-genfscon sysfs /class/power_supply/battery/input_suspend u:object_r:sysfs_battery_supply:s0
