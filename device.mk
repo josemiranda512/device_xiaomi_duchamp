@@ -15,6 +15,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Miui Camera
+$(call inherit-product-if-exists, device/xiaomi/duchamp-miuicamera/device.mk)
+
 # A/B
 ifneq ($(WITH_GMS),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
@@ -251,10 +254,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
-
-# PowerOffAlarm
-PRODUCT_PACKAGES += \
-    PowerOffAlarm
 
 # Properties
 include $(DEVICE_PATH)/vendor_logtag.mk
